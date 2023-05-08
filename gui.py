@@ -6,8 +6,7 @@ def run_external_app():
     os.system("ls")
 
 def run_nmap():
-    pass
-    # os.system("nmap 192.168.1.1")
+    os.system("nmap 192.168.1.1")
 
 def run_wireshark():
     os.system("wireshark")
@@ -33,7 +32,7 @@ def build_gui() -> None:
     Text(app, "Better than a Hak5 Wifi Pineapple", 20, align="top", font="Marker Felt", height=5)
     # add buttons to the GUI
     PushButton(app, text="Nmap Utility", command=nmap_utiltiy)
-    PushButton(app, text="Wireshark Utility", command=wireshark_utility)
+    PushButton(app, text="Wireshark Utility", command=run_wireshark)
     PushButton(app, text="Command 3", command=run_external_app)
     PushButton(app, text="Exit Full Screen", command=app.exit_full_screen)
     PushButton(app, text="Exit", command=exit)
